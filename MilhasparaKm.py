@@ -29,5 +29,7 @@ ttk.Label(mainframe , text="Milha").grid(column=3, row=1, sticky=W)
 ttk.Label(mainframe , text="É Equivalente a").grid(column=1, row=2, sticky=E)
 ttk.Label(mainframe , text="Km").grid(column=3, row=2, sticky=W)
 
+for child in mainframe.winfo_children(): 
+    child.grid_configure(padx=5, pady=5)
 
 root.mainloop()
