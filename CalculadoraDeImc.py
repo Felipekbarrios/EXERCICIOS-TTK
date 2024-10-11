@@ -9,7 +9,7 @@ def calculate(*args):
         valor2 = float(peso.get())   
         valor3 = (valor2 / (valor1 * valor1))
         resultado = round(valor3, 2)
-        imc.set(f"Resultado = {resultado}")
+        imc.set(f"IMC = {resultado}")
     except ValueError:
         pass
     
@@ -33,7 +33,7 @@ peso.set("PESO")
 imc = StringVar()
 ttk.Label(mainframe , textvariable=imc).grid(column=2, row=3, sticky=(W, E))
 ttk.Button(mainframe , text="Calcular", command=calculate).grid(column=3, row=3, sticky=W)
-imc.set('Resultado = ')
+imc.set('IMC = ')
 
 ttk.Label(mainframe, text= "Calculadora De IMC").grid(column = 2, row=1) 
 
